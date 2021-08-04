@@ -103,7 +103,7 @@ func spawn_new_cells() -> void:
 # Sets cell colors based on current state
 func colorize_cells() -> void:
 	for key in cells.keys():
-		cells[key].modulate = Color.aqua if grids[STATE_NOW][key] else Color.gray
+		cells[key].modulate = Color.lightseagreen if grids[STATE_NOW][key] else Color.dimgray
 
 #
 ## UI Handling
