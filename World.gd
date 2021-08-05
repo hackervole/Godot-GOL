@@ -45,8 +45,6 @@ func _on_Timer_timeout() -> void:
 	spawn_new_cells()
 	colorize_cells()
 
-	print("Step!")
-
 #
 ## Game logic
 
@@ -160,7 +158,7 @@ func get_speed() -> int:
 # Helper to get grid position of mouse click
 func get_grid_pos(pos: Vector2) -> Vector2:
 	var pixels = 32.0 / $Camera2D.zoom.x
-	return pos.snapped(Vector2(pixels, pixels)) / pixels
+	return (pos / pixels).round()
 
 # Convert mouse position to camera position based on zoom/offset
 func mouse_pos_to_cam_pos(pos: Vector2) -> Vector2:
